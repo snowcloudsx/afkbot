@@ -774,7 +774,15 @@ app.post('/start-bot', (req, res) => {
       port: 25565,
       username: email,
       password,
-      auth: 'microsoft'
+      auth: 'microsoft',
+      version: false, // Auto-detect version
+      skipValidation: true, // Skip some validations that might cause issues
+      hideErrors: false, // Show errors for debugging
+      checkTimeoutInterval: 30000, // 30 seconds
+      loginTimeout: 60000, // 60 seconds for login
+      keepAlive: true,
+      physicsEnabled: false, // Disable physics for AFK bot
+      chatLengthLimit: 256
     });
   } catch (err) {
     console.error('Error creating bot:', err);
