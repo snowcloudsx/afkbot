@@ -1,0 +1,2 @@
+# afkbot
+test
